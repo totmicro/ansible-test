@@ -2,6 +2,9 @@
 - name: Send Hello World Message
   hosts: localhost
   gather_facts: false
+  vars:
+    run_step_1: false
+    run_step_2: false
     
   tasks:
     - name: Step 1 - Display Hello World
