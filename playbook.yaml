@@ -7,3 +7,6 @@
     - name: Display Hello World
       debug:
         msg: "Hello, World!"
+    - name: Pause for Manual Step Check
+      pause:
+        prompt: "Please perform the manual check. Press Enter to continue when ready."
