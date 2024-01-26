@@ -2,11 +2,14 @@
 - name: Send Hello World Message
   hosts: localhost
   gather_facts: false
-
+    
   tasks:
-    - name: Display Hello World
+    - name: Step 1 - Display Hello World
       debug:
         msg: "Hello, World!"
-    - name: Pause for Manual Step Check
-      pause:
-        prompt: "Please perform the manual check. Press Enter to continue when ready."
+      when: run_step_1
+    - name: Step 2 - Display Goodbye World
+      debug:
+        msg: "Goodbye, World!"
+      when: run_step_2
+    
